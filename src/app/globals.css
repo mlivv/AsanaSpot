@@ -3,15 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --black: #0a0a0a;
-  --white: #ededed;
-  --lightBeige: #eae1d8;
-  --darkGreen: #4d5947;
-  --lightGreen: #a0a95b;
-  --mediumBrown: #a68053;
-}
-
 body {
   color: var(--black);
   background: var(--lightBeige);
@@ -48,6 +39,12 @@ body {
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
+    --darkGreen: 100 11% 31%;
+    --lightGreen: 67 31% 51%;
+    --lightBeige: 30 30% 88%;
+    --mediumBrown: 28 56% 29%;
+    --black: 0 0% 0%;
+    --white: 0 0% 100%;
   }
   .dark {
     --background: 0 0% 3.9%;
@@ -74,6 +71,13 @@ body {
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+    --radius: 0.5rem;
+    --darkGreen: 100 11% 31%;
+    --lightGreen: 67 31% 51%;
+    --lightBeige: 33 39% 76%;
+    --mediumBrown: 28 56% 29%;
+    --black: 0 0% 0%;
+    --white: 0 0% 100%;
   }
 }
 
