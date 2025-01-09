@@ -35,7 +35,7 @@ export default function Navbar({ className }: NavbarProps) {
     <div
       className={cn(
         `z-50 top-0 p-5 flex justify-between w-full items-center transition-all duration-300 border-b-2 border-white ${
-          pathname.includes("findVideos") && "bg-darkGreen"
+          !pathname.includes("homepage") && "bg-darkGreen"
         }`,
         className
       )}

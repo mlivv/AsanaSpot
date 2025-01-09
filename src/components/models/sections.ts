@@ -1,0 +1,1 @@
+type Sections = "Duration" | "Level" | "Type"
