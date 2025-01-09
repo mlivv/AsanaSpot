@@ -1,5 +1,6 @@
 "use client";
 
+import { redirect } from "next/navigation";
 import BackgroundImage from "../backgroundImage";
 import { Button } from "../ui/button";
 
@@ -8,13 +9,16 @@ export default function Intro() {
     const element = document.getElementById(element_id);
     element?.scrollIntoView({
       behavior: "smooth",
-      block: "end",
+      block: "center",
       inline: "nearest",
     });
   };
 
   return (
-    <div className="relative h-screen flex items-center justify-center">
+    <div
+      className="relative h-screen flex items-center justify-center"
+      id="intro"
+    >
       <BackgroundImage className="absolute top-0 left-0 -z-10" />
       <div className="flex flex-col gap-4 text-center max-w-[70vw] lg:max-w-[30vw]">
         <h1 className="text-white self-center text-3xl lg:text-6xl font-bold">
@@ -33,7 +37,9 @@ export default function Intro() {
             Discover more
           </Button>
 
-          <Button variant={"secondary"}>Start Searching</Button>
+          <Button variant={"secondary"} onClick={() => redirect("/findVideos")}>
+            Find videos
+          </Button>
         </div>
       </div>
     </div>

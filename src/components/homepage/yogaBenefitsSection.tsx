@@ -44,6 +44,7 @@ export default function YogaBenefitsSection() {
             </h2>
             <Button
               variant={"ghost"}
+              className="hover:bg-darkGreen/10"
               onClick={() => {
                 setActive(false);
                 setActiveButtonId(0);
