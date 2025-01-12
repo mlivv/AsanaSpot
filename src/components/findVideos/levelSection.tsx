@@ -4,7 +4,7 @@ import LevelButton from "./levelButton";
 import VideoSelectionLayout from "./videoSelectionLayout";
 
 interface LevelSectionProps {
-  handleSelection: (section: Sections, value: string) => void;
+  handleSelection: (section: Sections, value: levelType | null) => void;
 }
 
 export default function LevelSection({ handleSelection }: LevelSectionProps) {

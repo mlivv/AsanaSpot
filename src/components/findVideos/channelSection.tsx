@@ -1,15 +1,28 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ChannelList } from "../data/channelList";
-import VideoSelectionLayout from "./videoSelectionLayout";
+import { levelType } from "../models/level";
 import ChannelCard from "./channelCard";
+import VideoSelectionLayout from "./videoSelectionLayout";
 
 interface TypeSectionProps {
   handleSelection: (section: Sections, value: string) => void;
+  difficultySelected: levelType | null;
+  selectedChannel: string | null;
 }
 
-export default function ChannelSection({ handleSelection }: TypeSectionProps) {
+export default function ChannelSection({
+  handleSelection,
+  difficultySelected,
+  selectedChannel,
+}: TypeSectionProps) {
   const description = "Choose one of the available channel options.";
-  const [selectedId, setSelectedId] = useState<string>();
+  const [selectedChannelId, setSelectedChannelId] = useState<string | null>(
+    null
+  );
+
+  useEffect(() => {
+    setSelectedChannelId(selectedChannel);
+  }, [selectedChannel]);
 
   return (
     <VideoSelectionLayout title="Channels" description={description}>
@@ -19,8 +32,10 @@ export default function ChannelSection({ handleSelection }: TypeSectionProps) {
             key={channel.id}
             channel={channel}
             handleSelection={handleSelection}
-            selectedId={selectedId}
-            setSelectedId={setSelectedId}
+            selectedId={selectedChannelId}
+            disabled={
+              difficultySelected ? channel.level !== difficultySelected : false
+            }
           />
         ))}
       </div>

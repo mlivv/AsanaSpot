@@ -17,7 +17,7 @@ export default function VideoSelectionLayout({
   return (
     <div
       className={cn(
-        "lg:min-w-[18vw] p-6 max-h-[500px] bg-lightBeige rounded-lg overflow-y-auto shadow-md max-w-screen-sm",
+        "lg:w-[18vw] p-6 max-h-[500px] bg-lightBeige rounded-lg overflow-y-auto shadow-md max-w-screen-sm",
         className
       )}
     >

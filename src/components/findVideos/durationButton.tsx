@@ -4,7 +4,7 @@ import { Button } from "../ui/button";
 
 interface DurationButtonProps {
   selected: durationType | undefined;
-  handleSelection: (section: Sections, value: string) => void;
+  handleSelection: (section: Sections, value: durationType) => void;
   setSelected: Dispatch<SetStateAction<durationType | undefined>>;
   value: durationType;
 }
@@ -15,7 +15,8 @@ export default function DurationButton({
   setSelected,
   value,
 }: DurationButtonProps) {
-  const buttonStyle = "p-6 border-2 border-buttonRing hover:bg-buttonRing/20 hover:shadow hover:scale-105 transition-all";
+  const buttonStyle =
+    "p-6 border-2 border-buttonRing hover:bg-buttonRing/20 hover:shadow hover:scale-105 transition-all";
   const selectedStyle =
     "bg-lightGreen/30 border-lightGreen hover:bg-lightGreen/40";
   let durationText = "";
@@ -34,7 +35,7 @@ export default function DurationButton({
       className={`${buttonStyle} ${selected === value && selectedStyle}`}
       value={value}
       onClick={() => {
-        handleSelection("Duration", value);
+        handleSelection("duration", value);
         setSelected(value);
       }}
     >

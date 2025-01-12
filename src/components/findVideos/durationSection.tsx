@@ -4,7 +4,7 @@ import DurationButton from "./durationButton";
 import VideoSelectionLayout from "./videoSelectionLayout";
 
 interface DurationSectionProps {
-  handleSelection: (section: Sections, value: string) => void;
+  handleSelection: (section: Sections, value: durationType) => void;
 }
 
 export default function DurationSection({

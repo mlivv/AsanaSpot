@@ -2,9 +2,10 @@ import { Sparkle } from "lucide-react";
 import { Button } from "../ui/button";
 import { levelType } from "../models/level";
 import { Dispatch, SetStateAction } from "react";
+import SparkleLevel from "./sparkleLevel";
 
 interface LevelButtonProps {
-  handleSelection: (section: Sections, value: string) => void;
+  handleSelection: (section: Sections, value: levelType | null) => void;
   value: levelType;
   selected: levelType | undefined;
   setSelected: Dispatch<SetStateAction<levelType | undefined>>;
@@ -28,17 +29,13 @@ export default function LevelButton({
         selected === value && selectedStyle
       }`}
       onClick={() => {
-        handleSelection("Level", value), setSelected(value);
+        handleSelection("level", value);
+        handleSelection("channel", null);
+        setSelected(value);
       }}
     >
       <span>{value.charAt(0).toUpperCase() + value.slice(1)}</span>
-    <Sparkle className={`fill-black`} />
-      <Sparkle
-        className={`${
-          (value === "intermediate" || value === "advanced") && `fill-black`
-        }`}
-      />
-      <Sparkle className={`${value === "advanced" && `fill-black`}`} />
+      <SparkleLevel level={value} />
     </Button>
   );
 }
