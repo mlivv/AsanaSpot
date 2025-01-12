@@ -34,8 +34,8 @@ export default function Navbar({ className }: NavbarProps) {
   return (
     <div
       className={cn(
-        `z-50 top-0 p-5 flex justify-between w-full items-center transition-all duration-300 border-b-2 border-white ${
-          pathname.includes("findVideos") && "bg-darkGreen"
+        `z-50 top-0 p-5 flex justify-between w-full items-center transition-all duration-300 border-b-2 border-lightBeige ${
+          !pathname.includes("homepage") && "bg-darkGreen"
         }`,
         className
       )}
@@ -49,7 +49,9 @@ export default function Navbar({ className }: NavbarProps) {
           <Link
             href={n.url}
             key={n.id}
-            className={`text-white ${pathname.includes(n.url) && "underline"}`}
+            className={`text-white hover:underline ${
+              pathname.includes(n.url) ? "font-bold" : "font-light"
+            }`}
           >
             {n.title}
           </Link>

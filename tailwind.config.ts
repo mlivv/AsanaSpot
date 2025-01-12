@@ -18,6 +18,8 @@ export default {
         mediumBrown: "hsl(var(--mediumBrown))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        buttonRing: "hsl(var(--buttonRing))",
+        mediumGreen: "hsl(var(--mediumGreen))",
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",

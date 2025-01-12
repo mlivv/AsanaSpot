@@ -45,6 +45,9 @@ body {
     --mediumBrown: 28 56% 29%;
     --black: 0 0% 0%;
     --white: 0 0% 100%;
+    --buttonRing: 30 9% 61%;
+    --mediumGreen: 100 15% 44%;
+    --mediumBeige: 30 13% 71%;
   }
   .dark {
     --background: 0 0% 3.9%;
@@ -78,6 +81,9 @@ body {
     --mediumBrown: 28 56% 29%;
     --black: 0 0% 0%;
     --white: 0 0% 100%;
+    --buttonRing: 30 9% 61%;
+    --mediumGreen: 100 15% 44%;
+    --mediumBeige: 30 13% 71%;
   }
 }
 
@@ -88,4 +94,23 @@ body {
   /* body {
     @apply bg-background text-foreground;
   } */
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--lightGreen));
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--mediumGreen));
+  border: 1px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--mediumBeige));
+  border-radius: 8px;
 }
