@@ -49,7 +49,9 @@ export default function Navbar({ className }: NavbarProps) {
           <Link
             href={n.url}
             key={n.id}
-            className={`text-white hover:underline ${pathname.includes(n.url) ? "font-bold" : "font-light"}`}
+            className={`text-white hover:underline ${
+              pathname.includes(n.url) ? "font-bold" : "font-light"
+            }`}
           >
             {n.title}
           </Link>

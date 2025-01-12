@@ -8,12 +8,11 @@ interface LevelSectionProps {
 }
 
 export default function LevelSection({ handleSelection }: LevelSectionProps) {
-  const description =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non hendrerit felis. Duis a sodales diam. Nunc pellentesque lorem erat";
+  const description = "Select the fitness level that best represents you.";
   const [selected, setSelected] = useState<levelType>();
 
   return (
-    <VideoSelectionLayout title="Level" activeSection={true} description={description}>
+    <VideoSelectionLayout title="Level" description={description}>
       <div className="flex flex-col gap-4 items-center">
         <LevelButton
           handleSelection={handleSelection}

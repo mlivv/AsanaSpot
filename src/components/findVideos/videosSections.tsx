@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import DurationSection from "./durationSection";
 import LevelSection from "./levelSection";
-import TypeSection from "./typeSection";
+import ChannelSection from "./channelSection";
 
 export default function VideosSections() {
   const [selections, setSelections] = useState({
@@ -24,10 +24,16 @@ export default function VideosSections() {
   };
 
   return (
-    <div className="w-full grid grid-cols-3 max-w-screen-lg gap-6 mt-6">
-      <DurationSection handleSelection={handleSelection} />
-      <LevelSection handleSelection={handleSelection} />
-      <TypeSection />
+    <div className="w-full flex flex-col lg:flex-row justify-center max-w-screen-lg gap-8 py-6 px-4">
+      <DurationSection
+        handleSelection={handleSelection}
+      />
+      <LevelSection
+        handleSelection={handleSelection}
+      />
+      <ChannelSection
+        handleSelection={handleSelection}
+      />
     </div>
   );
 }

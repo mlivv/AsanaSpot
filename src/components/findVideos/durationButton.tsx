@@ -15,9 +15,9 @@ export default function DurationButton({
   setSelected,
   value,
 }: DurationButtonProps) {
-  const buttonStyle = "p-6 text-white border-2";
+  const buttonStyle = "p-6 border-2 border-buttonRing hover:bg-buttonRing/20 hover:shadow hover:scale-105 transition-all";
   const selectedStyle =
-    "bg-lightGreen/10 border-lightGreen hover:bg-lightGreen/40 hover:text-white";
+    "bg-lightGreen/30 border-lightGreen hover:bg-lightGreen/40";
   let durationText = "";
 
   switch (value) {

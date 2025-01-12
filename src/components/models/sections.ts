@@ -1,1 +1,1 @@
-type Sections = "Duration" | "Level" | "Type"
+type Sections = "Duration" | "Level" | "Channel"

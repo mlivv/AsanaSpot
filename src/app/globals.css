@@ -45,6 +45,8 @@ body {
     --mediumBrown: 28 56% 29%;
     --black: 0 0% 0%;
     --white: 0 0% 100%;
+    --buttonRing: 30 9% 61%;
+    --mediumGreen: 100 15% 44%;
   }
   .dark {
     --background: 0 0% 3.9%;
@@ -78,6 +80,8 @@ body {
     --mediumBrown: 28 56% 29%;
     --black: 0 0% 0%;
     --white: 0 0% 100%;
+    --buttonRing: 30 9% 61%;
+    --mediumGreen: 100 15% 44%;
   }
 }
 

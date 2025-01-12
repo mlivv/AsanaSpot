@@ -10,16 +10,11 @@ interface DurationSectionProps {
 export default function DurationSection({
   handleSelection,
 }: DurationSectionProps) {
-  const description =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non hendrerit felis. Duis a sodales diam. Nunc pellentesque lorem erat";
+  const description = "Specify your preferred workout duration.";
   const [selected, setSelected] = useState<durationType>();
 
   return (
-    <VideoSelectionLayout
-      title="Duration"
-      activeSection={true}
-      description={description}
-    >
+    <VideoSelectionLayout title="Duration" description={description}>
       <div className="flex flex-col gap-4 mx-auto">
         <DurationButton
           selected={selected}

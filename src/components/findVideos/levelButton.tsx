@@ -16,9 +16,10 @@ export default function LevelButton({
   selected,
   setSelected,
 }: LevelButtonProps) {
-  const containerStyle = "border border-white p-6 text-white ";
+  const containerStyle =
+    "p-6 border-2 w-full border-buttonRing flex items-center hover:bg-buttonRing/20 hover:shadow hover:scale-105 transition-all ";
   const selectedStyle =
-    "bg-lightGreen/10 border-lightGreen hover:bg-lightGreen/40 hover:text-white";
+    "bg-lightGreen/30 border-lightGreen hover:bg-lightGreen/40 hover:text-black";
 
   return (
     <Button
@@ -31,18 +32,13 @@ export default function LevelButton({
       }}
     >
       <span>{value.charAt(0).toUpperCase() + value.slice(1)}</span>
-      <Sparkle className={`fill-white group-hover:fill-black`} />
+    <Sparkle className={`fill-black`} />
       <Sparkle
         className={`${
-          (value === "intermediate" || value === "advanced") &&
-          "fill-white group-hover:fill-black"
+          (value === "intermediate" || value === "advanced") && `fill-black`
         }`}
       />
-      <Sparkle
-        className={`${
-          value === "advanced" && "fill-white group-hover:fill-black"
-        }`}
-      />
+      <Sparkle className={`${value === "advanced" && `fill-black`}`} />
     </Button>
   );
 }
