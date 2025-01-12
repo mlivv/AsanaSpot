@@ -96,6 +96,11 @@ body {
   } */
 }
 
+.scrollbar {
+  scrollbar-color: hsl(var(--lightGreen)) hsl(var(--mediumBeige));
+  scrollbar-width: thin;
+}
+
 ::-webkit-scrollbar {
   width: 5px;
 }
