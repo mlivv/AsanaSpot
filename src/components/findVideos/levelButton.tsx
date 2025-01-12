@@ -1,8 +1,7 @@
-import { Sparkle } from "lucide-react";
-import { Button } from "../ui/button";
-import { levelType } from "../models/level";
 import { Dispatch, SetStateAction } from "react";
-import SparkleLevel from "./sparkleLevel";
+import { levelType } from "../models/level";
+import { Button } from "../ui/button";
+import SparkleLevelIndicator from "./sparkleLevelIndicator";
 
 interface LevelButtonProps {
   handleSelection: (section: Sections, value: levelType | null) => void;
@@ -35,7 +34,7 @@ export default function LevelButton({
       }}
     >
       <span>{value.charAt(0).toUpperCase() + value.slice(1)}</span>
-      <SparkleLevel level={value} />
+      <SparkleLevelIndicator level={value} />
     </Button>
   );
 }

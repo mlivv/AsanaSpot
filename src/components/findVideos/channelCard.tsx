@@ -1,7 +1,5 @@
-import { Dispatch, SetStateAction } from "react";
 import { Channel } from "../models/channel";
-import { Sparkle } from "lucide-react";
-import SparkleLevel from "./sparkleLevel";
+import SparkleLevelIndicator from "./sparkleLevelIndicator";
 
 interface ChannelCardProps {
   channel: Channel;
@@ -45,7 +43,7 @@ export default function ChannelCard({
           {channel.name}
         </p>
         <div className="flex gap-2">
-          <SparkleLevel level={channel.level} />
+          <SparkleLevelIndicator level={channel.level} />
         </div>
       </div>
     </div>

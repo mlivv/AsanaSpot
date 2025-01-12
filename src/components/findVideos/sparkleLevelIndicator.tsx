@@ -5,7 +5,7 @@ interface SparkleLevelProps {
   level: levelType;
 }
 
-export default function SparkleLevel({ level }: SparkleLevelProps) {
+export default function SparkleLevelIndicator({ level }: SparkleLevelProps) {
   return (
     <>
       <Sparkle size={15} className={`fill-black`} />

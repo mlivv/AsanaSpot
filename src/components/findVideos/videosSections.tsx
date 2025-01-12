@@ -27,7 +27,6 @@ export default function VideosSections() {
     useState<levelType | null>(selections.level);
 
   useEffect(() => {
-    console.log(selections);
     setDifficultySelected(selections.level);
   }, [selections]);
 
@@ -41,6 +40,10 @@ export default function VideosSections() {
     }));
   };
 
+  const isSelectionValidated = (obj: SelectionsType) => {
+    return Object.values(obj).some((value) => value === null);
+  };
+
   return (
     <div className="w-full flex flex-col items-center justify-center">
       <div className="flex flex-col lg:flex-row gap-6 py-6 px-4">
@@ -52,9 +55,13 @@ export default function VideosSections() {
           selectedChannel={selections.channel}
         />
       </div>
-      <Button className="self-center">Search</Button>
+      <Button
+        className="self-center"
+        disabled={isSelectionValidated(selections)}
+        onClick={() => console.log("click")}
+      >
+        Search
+      </Button>
     </div>
   );
 }
-
-      // <div className="flex flex-col lg:flex-row max-w-screen-xl gap-8 py-6 px-4">
