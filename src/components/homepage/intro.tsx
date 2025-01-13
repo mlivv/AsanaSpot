@@ -1,7 +1,7 @@
 "use client";
 
 import { redirect } from "next/navigation";
-import BackgroundImage from "../backgroundImage";
+import BackgroundImage from "./backgroundImage";
 import { Button } from "../ui/button";
 
 export default function Intro() {
