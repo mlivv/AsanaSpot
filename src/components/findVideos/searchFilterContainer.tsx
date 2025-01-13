@@ -1,6 +1,6 @@
 import { LoaderCircle } from "lucide-react";
 import { Dispatch, SetStateAction, useState } from "react";
-import { GetVideos } from "../api/getVideos/videoServiceClient";
+import { GetVideos } from "../api/getVideos/videoClient";
 import { durationType } from "../models/duration";
 import { levelType } from "../models/level";
 import { SelectionsType } from "../models/selection";
