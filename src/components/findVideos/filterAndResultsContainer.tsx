@@ -1,9 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { VideoPreview } from "../models/videoPreview";
 import ResultsContainer from "./resultsContainer";
 import SearchFilterContainer from "./searchFilterContainer";
-import { VideoPreview } from "../models/videoPreview";
 
 export default function FilterAndResultsContainer() {
   const [results, setResults] = useState<VideoPreview[]>([]);
@@ -17,7 +17,11 @@ export default function FilterAndResultsContainer() {
         setWarning={setWarning}
         setWarningMessage={setWarningMessage}
       />
-      <ResultsContainer results={results} warning={warning} />
+      <ResultsContainer
+        results={results}
+        warning={warning}
+        warningMessage={warningMessage}
+      />
     </div>
   );
 }

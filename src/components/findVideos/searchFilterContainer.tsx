@@ -1,3 +1,4 @@
+import { LoaderCircle } from "lucide-react";
 import { Dispatch, SetStateAction, useState } from "react";
 import { GetVideos } from "../api/getVideos/videoServiceClient";
 import { durationType } from "../models/duration";
@@ -24,6 +25,8 @@ export default function SearchFilterContainer({
     channel: null,
   });
 
+  const [loading, setLoading] = useState<boolean>(false);
+
   const handleSelection = (
     section: Sections,
     value: durationType | levelType | string | null
@@ -43,10 +46,11 @@ export default function SearchFilterContainer({
   };
 
   const loadData = async () => {
-    event?.preventDefault();
     try {
+      setLoading(true);
       const data = await GetVideos(selections);
       setResults(data);
+      setLoading(false);
     } catch (e) {
       const message = (e as Error).message;
       setWarning(true);
@@ -60,13 +64,17 @@ export default function SearchFilterContainer({
         handleSelection={handleSelection}
         selections={selections}
       />
-      <Button
-        className="self-center"
-        disabled={!isSelectionValidated(selections)}
-        onClick={() => loadData()}
-      >
-        Search
-      </Button>
+      <div className="p-6 w-full lg:max-w-fit">
+        <Button
+          type="button"
+          variant={"secondary"}
+          className="self-center w-full"
+          disabled={!isSelectionValidated(selections) || loading}
+          onClick={() => loadData()}
+        >
+          {loading ? <LoaderCircle className="animate-spin" /> : "Search"}
+        </Button>
+      </div>
     </div>
   );
 }
