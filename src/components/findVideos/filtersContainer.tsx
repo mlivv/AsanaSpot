@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { durationType } from "../models/duration";
 import { levelType } from "../models/level";
-import { SelectionsType } from "../models/selection";
+import { SelectionFilter } from "../models/selection";
 import ChannelSection from "./channelSection";
 import DurationSection from "./durationSection";
 import LevelSection from "./levelSection";
 
 interface FiltersContainerProps {
-  selections: SelectionsType;
+  selections: SelectionFilter;
   handleSelection: (
     section: Sections,
     value: durationType | levelType | string | null

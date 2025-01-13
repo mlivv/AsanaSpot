@@ -1,10 +1,10 @@
 "use server";
 
 import { VideoPreviewDto } from "@/components/models/dto/videoPreviewDto";
-import { SelectionsType } from "../../models/selection";
+import { SelectionFilter } from "../../models/selection";
 
 export async function fetchVideos(
-  selection: SelectionsType
+  selection: SelectionFilter
 ): Promise<{ items: VideoPreviewDto[] }> {
   const apiKey = process.env.API_KEY;
 

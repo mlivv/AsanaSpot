@@ -3,7 +3,7 @@ import { Dispatch, SetStateAction, useState } from "react";
 import { GetVideos } from "../api/getVideos/videoClient";
 import { durationType } from "../models/duration";
 import { levelType } from "../models/level";
-import { SelectionsType } from "../models/selection";
+import { SelectionFilter } from "../models/selection";
 import { VideoPreview } from "../models/videoPreview";
 import { Button } from "../ui/button";
 import FiltersContainer from "./filtersContainer";
@@ -19,7 +19,7 @@ export default function SearchFilterContainer({
   setWarning,
   setWarningMessage,
 }: SearchFilterContainerProps) {
-  const [selections, setSelections] = useState<SelectionsType>({
+  const [selections, setSelections] = useState<SelectionFilter>({
     duration: null,
     level: null,
     channel: null,
@@ -37,7 +37,7 @@ export default function SearchFilterContainer({
     }));
   };
 
-  const isSelectionValidated = (obj: SelectionsType) => {
+  const isSelectionValidated = (obj: SelectionFilter) => {
     if (Object.values(obj).some((value) => value === null)) {
       return false;
     } else {

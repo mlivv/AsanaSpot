@@ -1,7 +1,7 @@
 import { durationType } from "./duration";
 import { levelType } from "./level";
 
-export type SelectionsType = {
+export interface SelectionFilter {
   duration: durationType | null;
   level: levelType | null;
   channel: string | null;

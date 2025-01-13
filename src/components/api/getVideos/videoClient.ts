@@ -1,10 +1,10 @@
-import { SelectionsType } from "@/components/models/selection";
+import { SelectionFilter } from "@/components/models/selection";
 import { VideoPreview } from "@/components/models/videoPreview";
-import { fetchVideos } from "./videos-api";
 import { mapVideoPreviewDtoToVideoPreview } from "./videosMapping";
+import { fetchVideos } from "./videoQuery";
 
 export async function GetVideos(
-  selection: SelectionsType
+  selection: SelectionFilter
 ): Promise<VideoPreview[]> {
   const data = await fetchVideos(selection);
   const mappedVideos: VideoPreview[] = mapVideoPreviewDtoToVideoPreview(
