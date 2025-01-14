@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { VideoPreview } from "../models/videoPreview";
 
 interface ResultsContainerProps {

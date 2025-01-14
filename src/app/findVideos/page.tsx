@@ -32,5 +32,3 @@ export default function FindVideosPage() {
     </div>
   );
 }
-
-//bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-mediumGreen to-darkGreen
