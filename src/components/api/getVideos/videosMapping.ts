@@ -7,11 +7,10 @@ export function VideoPreviewDtoToVideoPreview(
   return {
     id: videoPreviewDto.id.videoId,
     title: videoPreviewDto.snippet.title,
-    description: videoPreviewDto.snippet.description,
     publishingDate: new Date(videoPreviewDto.snippet.publishedAt)
       .toISOString()
       .split("T")[0],
-    imgUrl: videoPreviewDto.snippet.thumbnails.high.url,
+    imgUrl: videoPreviewDto.snippet.thumbnails.medium.url,
   };
 }
 

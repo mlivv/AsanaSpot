@@ -1,6 +1,6 @@
 import { LoaderCircle } from "lucide-react";
 import { Dispatch, SetStateAction, useState } from "react";
-import { GetVideos } from "../api/getVideos/videoClient";
+import { GetVideos } from "../api/getVideos/videoService";
 import { durationType } from "../models/duration";
 import { levelType } from "../models/level";
 import { SelectionFilter } from "../models/selection";
@@ -52,14 +52,15 @@ export default function SearchFilterContainer({
       setResults(data);
       setLoading(false);
     } catch (e) {
-      const message = (e as Error).message;
       setWarning(true);
-      setWarningMessage(message);
+      setWarningMessage(
+        "Sorry, it looks like there's an error. Please try again later"
+      );
     }
   };
 
   return (
-    <div className="w-full flex flex-col items-center justify-center min-h-[calc(100vh-40vh)]">
+    <div className="w-full flex flex-col items-center justify-center">
       <FiltersContainer
         handleSelection={handleSelection}
         selections={selections}
@@ -68,7 +69,7 @@ export default function SearchFilterContainer({
         <Button
           type="button"
           variant={"secondary"}
-          className="self-center w-full"
+          className="self-center text-white font-bold w-full bg-mediumGreen hover:bg-mediumGreen/80"
           disabled={!isSelectionValidated(selections) || loading}
           onClick={() => loadData()}
         >

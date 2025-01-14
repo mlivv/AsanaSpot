@@ -28,13 +28,20 @@ export default function FiltersContainer({
   }, [selections]);
 
   return (
-    <div className="flex flex-col lg:flex-row gap-6 py-6 px-4">
-      <DurationSection handleSelection={handleSelection} />
-      <LevelSection handleSelection={handleSelection} />
+    <div className="grid grid-cols-3 gap-6 py-6 px-4">
+      <DurationSection
+        handleSelection={handleSelection}
+        className="col-span-3 lg:col-span-1"
+      />
+      <LevelSection
+        handleSelection={handleSelection}
+        className="col-span-3 lg:col-span-1"
+      />
       <ChannelSection
         handleSelection={handleSelection}
         difficultySelected={difficultySelected}
         selectedChannel={selections.channel}
+        className="col-span-3 lg:col-span-1"
       />
     </div>
   );

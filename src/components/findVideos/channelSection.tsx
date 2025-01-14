@@ -8,12 +8,14 @@ interface TypeSectionProps {
   handleSelection: (section: Sections, value: string) => void;
   difficultySelected: levelType | null;
   selectedChannel: string | null;
+  className?: string;
 }
 
 export default function ChannelSection({
   handleSelection,
   difficultySelected,
   selectedChannel,
+  className,
 }: TypeSectionProps) {
   const description = "Choose one of the available channel options.";
   const [selectedChannelId, setSelectedChannelId] = useState<string | null>(
@@ -25,7 +27,11 @@ export default function ChannelSection({
   }, [selectedChannel]);
 
   return (
-    <VideoSelectionLayout title="Channels" description={description}>
+    <VideoSelectionLayout
+      title="Channels"
+      description={description}
+      className={className}
+    >
       <div className="pb-4">
         {ChannelList.map((channel) => (
           <ChannelCard
