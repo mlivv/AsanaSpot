@@ -20,10 +20,10 @@ export default function YogaBenefitsSection() {
         </h3>
         <p className="text-white">
           Yoga has long been recognized for its transformative effects on both
-          the body and mind. It’s a practice that goes beyond physical
-          postures, offering a space for personal growth, relaxation, and
-          mindfulness. Whether you're a beginner or an experienced practitioner,
-          yoga can help you cultivate a balanced and healthier lifestyle.
+          the body and mind. It’s a practice that goes beyond physical postures,
+          offering a space for personal growth, relaxation, and mindfulness.
+          Whether you're a beginner or an experienced practitioner, yoga can
+          help you cultivate a balanced and healthier lifestyle.
         </p>
       </div>
       <div className="grid grid-cols-3 gap-2 lg:gap-4 mt-2">
