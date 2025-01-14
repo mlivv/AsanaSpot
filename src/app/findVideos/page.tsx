@@ -1,14 +1,19 @@
 "use client";
 
+import { scrolltoHash } from "@/components/animations/scrollToHash";
 import ResultsContainer from "@/components/findVideos/resultsContainer";
 import SearchFilterContainer from "@/components/findVideos/searchFilterContainer";
 import { VideoPreview } from "@/components/models/videoPreview";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function FindVideosPage() {
   const [results, setResults] = useState<VideoPreview[]>([]);
   const [warning, setWarning] = useState<boolean>(false);
   const [warningMessage, setWarningMessage] = useState<string>("");
+
+  useEffect(() => {
+    if (results.length > 0) scrolltoHash("results", "nearest");
+  }, [results]);
 
   return (
     <div className="bg-darkGreen min-h-screen pt-[15vh]">
@@ -22,13 +27,15 @@ export default function FindVideosPage() {
           setWarningMessage={setWarningMessage}
         />
       </div>
-      {(results.length > 0 || warning) && (
-        <ResultsContainer
-          results={results}
-          warning={warning}
-          warningMessage={warningMessage}
-        />
-      )}
+      <div id="results">
+        {(results.length > 0 || warning) && (
+          <ResultsContainer
+            results={results}
+            warning={warning}
+            warningMessage={warningMessage}
+          />
+        )}
+      </div>
     </div>
   );
 }

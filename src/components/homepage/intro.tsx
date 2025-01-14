@@ -1,19 +1,11 @@
 "use client";
 
 import { redirect } from "next/navigation";
-import BackgroundImage from "./backgroundImage";
+import { scrolltoHash } from "../animations/scrollToHash";
 import { Button } from "../ui/button";
+import BackgroundImage from "./backgroundImage";
 
 export default function Intro() {
-  const scrolltoHash = function (element_id: string) {
-    const element = document.getElementById(element_id);
-    element?.scrollIntoView({
-      behavior: "smooth",
-      block: "center",
-      inline: "nearest",
-    });
-  };
-
   return (
     <div
       className="relative h-screen flex items-center justify-center"
@@ -33,7 +25,7 @@ export default function Intro() {
           <Button
             variant={"outline"}
             className="text-white"
-            onClick={() => scrolltoHash("whatIsYoga")}
+            onClick={() => scrolltoHash("whatIsYoga", "center")}
           >
             Discover more
           </Button>

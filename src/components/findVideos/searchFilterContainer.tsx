@@ -65,7 +65,7 @@ export default function SearchFilterContainer({
         handleSelection={handleSelection}
         selections={selections}
       />
-      <div className="p-6 w-full lg:max-w-fit">
+      <div className="pb-6 px-6 w-full md:max-w-fit">
         <Button
           type="button"
           variant={"secondary"}
