@@ -7,14 +7,14 @@ interface YogaBenefitButtonProps {
   b: YogaBenefit;
   className?: string;
   setActive: Dispatch<SetStateAction<boolean>>;
-  setActiveButtonId: Dispatch<SetStateAction<number>>;
+  setActiveId: Dispatch<SetStateAction<number>>;
   active: boolean;
 }
 
-export default function YogaBenefitButton({
+export default function YogaBenefitCard({
   className,
   setActive,
-  setActiveButtonId,
+  setActiveId,
   active,
   b,
 }: YogaBenefitButtonProps) {
@@ -33,7 +33,7 @@ export default function YogaBenefitButton({
       )}
       onClick={() => {
         setActive(true);
-        setActiveButtonId(id);
+        setActiveId(id);
       }}
     >
       <div className="w-full flex justify-center items-center">
