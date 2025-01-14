@@ -34,7 +34,7 @@ export default function Navbar({ className }: NavbarProps) {
   return (
     <div
       className={cn(
-        `z-50 top-0 p-5 flex justify-between w-full items-center transition-all duration-300 border-b-2 border-lightBeige ${
+        `z-50 fixed top-0 p-5 left-0 flex justify-between w-full items-center transition-all duration-300 border-b-2 border-lightBeige ${
           !pathname.includes("homepage") && "bg-darkGreen"
         }`,
         className

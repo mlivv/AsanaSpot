@@ -11,7 +11,7 @@ export default function Intro() {
       className="relative h-screen flex items-center justify-center"
       id="intro"
     >
-      <BackgroundImage className="absolute top-0 left-0 -z-10" />
+      <BackgroundImage className="absolute top-0 left-0 -z-20" />
       <div className="flex flex-col gap-4 text-center max-w-[70vw] lg:max-w-[30vw]">
         <h1 className="text-white self-center text-3xl lg:text-6xl font-bold">
           Find what's best for you today
