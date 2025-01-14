@@ -25,8 +25,9 @@ export default function Intro() {
           Find what's best for you today
         </h1>
         <p className="text-white">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non
-          hendrerit felis. Duis a sodales diam. Nunc pellentesque lorem erat
+          Explore yoga videos tailored to your needs. Select your preferences,
+          and let us help you find the perfect session to suit your mood and
+          goals.
         </p>
         <div className="flex gap-6 self-center">
           <Button

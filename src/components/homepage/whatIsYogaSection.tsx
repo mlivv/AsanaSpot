@@ -7,14 +7,14 @@ export default function WhatIsYogaSection() {
       <div className="flex flex-col justify-center gap-2" id="whatIsYoga">
         <h3 className="text-2xl lg:text-4xl font-extrabold">What is yoga?</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non
-          hendrerit felis. Duis a sodales diam. Nunc pellentesque lorem erat, in
-          scelerisque dui consectetur at. Morbi vel ornare nisl. Nulla ut ex ac
-          elit imperdiet convallis. Praesent elementum mi in enim mattis
-          commodo. Curabitur quis tellus in nibh tempor sollicitudin. Integer
-          rhoncus quam felis, gravida accumsan risus consectetur sed. Etiam
-          malesuada, urna sollicitudin lacinia tempor, purus quam congue mauris,
-          quis iaculis ipsum sapien id nibh.
+          Yoga is an ancient practice that blends physical postures, breath
+          control, and meditation to create a holistic approach to well-being.
+          It aims to connect the body and mind through mindful movement and
+          awareness. While yoga originated in India, it has become a global
+          practice that helps people improve flexibility, reduce stress, and
+          achieve a sense of balance and inner peace. Whether for fitness or
+          mental clarity, yoga offers a versatile and accessible path to a
+          healthier lifestyle.
         </p>
       </div>
       <div className="lg:max-w-[25vw]">

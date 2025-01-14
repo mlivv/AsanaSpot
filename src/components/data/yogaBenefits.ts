@@ -13,20 +13,20 @@ export const YogaBenefits: YogaBenefit[] = [
     icon: HeartPulse,
     title: "Improves Physical Health",
     details:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non hendrerit felis. Duis a sodales diam. Nunc pellentesque lorem erat, in scelerisque dui consectetur at. Morbi vel ornare nisl. Nulla ut ex ac elit imperdiet convallis. Praesent elementum mi in enim mattis commodo. Curabitur quis tellus in nibh tempor sollicitudin. Integer rhoncus quam felis, gravida accumsan risus consectetur sed. Etiam malesuada, urna sollicitudin lacinia tempor, purus quam congue mauris, quis iaculis ipsum sapien id nibh.",
+      "Yoga helps improve flexibility, build strength, and enhance balance. It also promotes better posture and supports joint health. Regular practice can alleviate chronic pain and increase overall physical endurance, making it an excellent addition to a healthy lifestyle.",
   },
   {
     id: 2,
     icon: ZapOff,
     title: "Reduce Stress",
     details:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non hendrerit felis. Duis a sodales diam. Nunc pellentesque lorem erat, in scelerisque dui consectetur at. Morbi vel ornare nisl. Nulla ut ex ac elit imperdiet convallis. Praesent elementum mi in enim mattis commodo. Curabitur quis tellus in nibh tempor sollicitudin. Integer rhoncus quam felis, gravida accumsan risus consectetur sed. Etiam malesuada, urna sollicitudin lacinia tempor, purus quam congue mauris, quis iaculis ipsum sapien id nibh.",
+      "Through deep breathing and mindfulness, yoga helps lower cortisol levels, the body's stress hormone. Practicing yoga regularly fosters relaxation, eases tension, and cultivates a sense of inner calm, making it an effective tool for managing stress and anxiety.",
   },
   {
     id: 3,
     icon: Smile,
     title: "Promotes Emotional Well-Being",
     details:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non hendrerit felis. Duis a sodales diam. Nunc pellentesque lorem erat, in scelerisque dui consectetur at. Morbi vel ornare nisl. Nulla ut ex ac elit imperdiet convallis. Praesent elementum mi in enim mattis commodo. Curabitur quis tellus in nibh tempor sollicitudin. Integer rhoncus quam felis, gravida accumsan risus consectetur sed. Etiam malesuada, urna sollicitudin lacinia tempor, purus quam congue mauris, quis iaculis ipsum sapien id nibh.",
+      "Yoga encourages self-awareness and emotional balance by connecting the mind and body. It fosters a positive outlook, improves mood, and supports mental clarity. Over time, yoga can help you develop resilience and a deeper sense of happiness and contentment.",
   },
 ];

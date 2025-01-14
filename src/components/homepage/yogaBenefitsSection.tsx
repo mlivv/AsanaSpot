@@ -14,15 +14,18 @@ export default function YogaBenefitsSection() {
 
   return (
     <div className="bg-darkGreen px-[5vw] lg:px-[20vw] py-[10vh] min-h-[calc(100vh-20vh)]">
-      <h3 className="text-2xl lg:text-4xl font-extrabold text-white">
-        What are the benefits of yoga?
-      </h3>
-      <p className="text-white">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus
-        totam sint delectus quaerat aliquid voluptatum ex! Veritatis, vero?
-        Iste, asperiores eos. Sint error recusandae perspiciatis nam
-        voluptatibus cumque non impedit in, repellendus fuga neque voluptates!
-      </p>
+      <div className="flex flex-col justify-center gap-2">
+        <h3 className="text-2xl lg:text-4xl font-extrabold text-white">
+          What are the benefits of yoga?
+        </h3>
+        <p className="text-white">
+          Yoga has long been recognized for its transformative effects on both
+          the body and mind. It’s a practice that goes beyond physical postures,
+          offering a space for personal growth, relaxation, and mindfulness.
+          Whether you're a beginner or an experienced practitioner, yoga can
+          help you cultivate a balanced and healthier lifestyle.
+        </p>
+      </div>
       <div className="grid grid-cols-3 gap-2 lg:gap-6 mt-6">
         {YogaBenefits.map((b) => (
           <YogaBenefitButton
