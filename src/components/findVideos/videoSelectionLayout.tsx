@@ -21,8 +21,8 @@ export default function VideoSelectionLayout({
         className
       )}
     >
-      <p className={`text-center text-2xl font-extrabold`}>{title}</p>
-      <p className="text-center mb-4">{description}</p>
+      <p className={`text-2xl font-bold`}>{title}</p>
+      <p className=" mb-4">{description}</p>
       <div className="max-h-[300px]">{children}</div>
     </div>
   );

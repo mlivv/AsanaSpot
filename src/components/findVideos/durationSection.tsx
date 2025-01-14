@@ -5,16 +5,22 @@ import VideoSelectionLayout from "./videoSelectionLayout";
 
 interface DurationSectionProps {
   handleSelection: (section: Sections, value: durationType) => void;
+  className?: string;
 }
 
 export default function DurationSection({
   handleSelection,
+  className,
 }: DurationSectionProps) {
   const description = "Specify your preferred workout duration.";
   const [selected, setSelected] = useState<durationType>();
 
   return (
-    <VideoSelectionLayout title="Duration" description={description}>
+    <VideoSelectionLayout
+      title="Duration"
+      description={description}
+      className={className}
+    >
       <div className="flex flex-col gap-4 mx-auto">
         <DurationButton
           selected={selected}

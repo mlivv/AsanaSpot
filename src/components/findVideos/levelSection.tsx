@@ -5,14 +5,22 @@ import VideoSelectionLayout from "./videoSelectionLayout";
 
 interface LevelSectionProps {
   handleSelection: (section: Sections, value: levelType | null) => void;
+  className?: string;
 }
 
-export default function LevelSection({ handleSelection }: LevelSectionProps) {
+export default function LevelSection({
+  handleSelection,
+  className,
+}: LevelSectionProps) {
   const description = "Select the fitness level that best represents you.";
   const [selected, setSelected] = useState<levelType>();
 
   return (
-    <VideoSelectionLayout title="Level" description={description}>
+    <VideoSelectionLayout
+      title="Level"
+      description={description}
+      className={className}
+    >
       <div className="flex flex-col gap-4 items-center">
         <LevelButton
           handleSelection={handleSelection}
