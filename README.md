@@ -4,10 +4,10 @@ Asana Spot is your go-to tool for discovering yoga videos tailored to your mood 
 # Getting Started
 To get the most out of Asana Spot, follow these simple steps:
 
-  1) Register for Your API Key
+  1) Register for Your API Key<br/>
   Sign up on this [website](https://developers.google.com/youtube/v3?hl=it) to obtain your personal API key.
 
-  2) Set Up Your Environment
+  2) Set Up Your Environment<br/>
   Create a ".env.local" file in your project directory and add the following variable:
 
   - API_KEY=<your_api_key> 
