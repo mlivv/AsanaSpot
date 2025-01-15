@@ -10,9 +10,8 @@ To get the most out of Asana Spot, follow these simple steps:
   2) Set Up Your Environment
   Create a ".env.local" file in your project directory and add the following variable:
 
-  - API_KEY=<your_api_key>  
-
-  Replace <your_api_key> with the API key you received during registration.
+  - API_KEY=<your_api_key> 
+  - Replace <your_api_key> with the API key you received during registration.
 
   3) Enjoy Your Yoga Journey!
 
